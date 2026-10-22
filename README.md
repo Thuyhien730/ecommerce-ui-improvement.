@@ -62,5 +62,3 @@ AI được sử dụng như công cụ tham khảo để:
 - Đối chiếu kết quả AI với ghi nhận khảo sát thực tế.
 - Hỗ trợ giải thích và đề xuất chỉnh sửa HTML/CSS khi cần thiết.
 Các kết quả do AI đề xuất được kiểm tra và đối chiếu với nội dung khảo sát trước khi sử dụng. Những nhận xét chưa có bằng chứng được điều chỉnh thành vấn đề cần xác minh hoặc đề xuất cải tiến. Người thực hiện chịu trách nhiệm lựa chọn nội dung phù hợp và kiểm tra giao diện sau khi chỉnh sửa.
-
-Chi tiết về công cụ, prompt, kết quả tham khảo và việc kiểm tra được trình bày trong file [`AI_USAGE.md`](AI_USAGE.md).
