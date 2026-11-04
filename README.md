@@ -62,3 +62,46 @@ AI được sử dụng như công cụ tham khảo để:
 - Đối chiếu kết quả AI với ghi nhận khảo sát thực tế.
 - Hỗ trợ giải thích và đề xuất chỉnh sửa HTML/CSS khi cần thiết.
 Các kết quả do AI đề xuất được kiểm tra và đối chiếu với nội dung khảo sát trước khi sử dụng. Những nhận xét chưa có bằng chứng được điều chỉnh thành vấn đề cần xác minh hoặc đề xuất cải tiến. Người thực hiện chịu trách nhiệm lựa chọn nội dung phù hợp và kiểm tra giao diện sau khi chỉnh sửa.
+
+# Bài tập cá nhân – Buổi 2
+## Phát triển ứng dụng Thương mại điện tử
+
+### 1. Giới thiệu bài tập
+Bài tập cá nhân Buổi 2 tiếp tục phát triển website thương mại điện tử từ Buổi 1. Em thực hành HTML5 và CSS3 nhằm cải thiện cấu trúc, bố cục và khả năng hiển thị của giao diện website.
+
+**Tên website:** BeeBake – Nguyên liệu và dụng cụ làm bánh  
+**Mô tả:** Website giới thiệu và trưng bày các sản phẩm nguyên liệu, dụng cụ làm bánh.
+
+### 2. Website tham khảo và khu vực cải tiến
+- **Website tham khảo:** [Tên website / đường dẫn]
+- **Khu vực đã thực hành, cải tiến:** Danh sách sản phẩm nổi bật.
+- **Nội dung thực hiện:** Điều chỉnh bố cục sản phẩm bằng CSS Grid, bổ sung hiệu ứng hover/focus và kiểm tra giao diện ở các kích thước màn hình khác nhau.
+
+### 3. Kỹ thuật HTML5/CSS3 đã thực hành
+- **HTML5:** Sử dụng các phần tử có ý nghĩa như `header`, `nav`, `main`, `section`, `article`, `footer`, `img`.
+- **CSS Selector:** Sử dụng element selector, class selector và descendant selector.
+- **Box Model:** Thực hành `margin`, `padding`, `border`, `border-radius`.
+- **Flexbox:** Căn chỉnh các thành phần giao diện bằng `display: flex`, `justify-content`, `align-items` và `gap`.
+- **CSS Grid:** Bố trí danh sách sản phẩm thành các cột bằng `display: grid`, `grid-template-columns` và `gap`.
+- **Pseudo-class:** Bổ sung hiệu ứng `:hover` và trạng thái `:focus-visible`.
+- **Responsive:** Sử dụng media query để điều chỉnh danh sách sản phẩm trên màn hình nhỏ.
+
+### 4. Hướng dẫn chạy website
+1. Tải hoặc clone repository về máy.
+2. Mở thư mục dự án.
+3. Mở file `index.html` bằng trình duyệt hoặc sử dụng extension Live Server trong Visual Studio Code.
+
+### 5. Những thay đổi đã thực hiện
+- Điều chỉnh bố cục danh sách sản phẩm bằng CSS Grid.
+- Bổ sung hiệu ứng hover và focus-visible cho nút “Thêm vào giỏ”.
+- Kiểm tra giao diện bằng Chrome DevTools.
+- Điều chỉnh danh sách sản phẩm từ ba cột thành hai cột khi màn hình có chiều rộng tối đa 480px, giúp nội dung dễ quan sát hơn.
+
+### 6. Công cụ AI đã sử dụng và cách kiểm tra kết quả
+- **Công cụ AI:** ChatGPT.
+- **Mục đích sử dụng:** Hỗ trợ giải thích HTML5/CSS3, đề xuất CSS và hướng dẫn kiểm tra, điều chỉnh giao diện.
+- **Cách kiểm tra:** Em xem xét mã nguồn được đề xuất, áp dụng vào website và kiểm tra kết quả trực tiếp trên trình duyệt bằng Chrome DevTools. Em điều chỉnh lại mã khi phát hiện vấn đề về bố cục ở màn hình nhỏ.
+
+### 7. Repository và website triển khai
+- **Repository:** [Đường dẫn GitHub]
+- **Website:** [Đường dẫn website đã triển khai / Chưa triển khai]
