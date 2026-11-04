@@ -1,269 +1,431 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Giao diện giỏ hàng mẫu cho cửa hàng nguyên liệu và dụng cụ làm bánh.">
-  <title>Giỏ hàng | BeeBake</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="BeeBake - Cửa hàng nguyên liệu và dụng cụ làm bánh dành cho mọi người yêu thích làm bánh tại nhà.">
+
+    <title>BeeBake | Nguyên liệu và dụng cụ làm bánh</title>
+
+    <!-- GOOGLE FONT: BE VIETNAM PRO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+       <!-- LIÊN KẾT FILE CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#" aria-label="BeeBake - Trang chủ">
-        <span class="brand-mark" aria-hidden="true">B</span>
-        <span>Bee<span class="brand-accent">Bake</span></span>
-      </a>
-      <nav class="main-nav" aria-label="Điều hướng chính">
-        <a href="#products">Sản phẩm</a>
-        <a href="#cart" aria-current="page">Giỏ hàng <span class="cart-count" id="cart-count">4</span></a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container page-content">
-    <div class="page-heading">
-      <div>
-        <p class="eyebrow">MUA SẮM DỄ DÀNG</p>
-        <h1>Giỏ hàng của bạn</h1>
-        <p class="page-intro">Kiểm tra sản phẩm và số lượng trước khi tiếp tục.</p>
-      </div>
-      <a class="continue-link" href="#products">← Tiếp tục mua sắm</a>
-    </div>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
 
-    <section class="cart-layout" id="cart" aria-label="Giỏ hàng">
-      <div class="cart-main">
-        <div class="section-heading">
-          <h2>Sản phẩm đã chọn</h2>
-          <span id="item-count">4 sản phẩm</span>
+            <a href="#home" class="brand">
+                <span class="brand-mark">B</span>
+                <span>Bee<span class="brand-accent">Bake</span></span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="#home">Trang chủ</a>
+                <a href="#categories">Danh mục</a>
+                <a href="#products">Sản phẩm</a>
+                <a href="#recipes">Công thức</a>
+                <a href="#about">Về BeeBake</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#products" class="search-link">⌕ Tìm kiếm</a>
+                <a href="#products" class="cart-link" id="cartLink">
+                    Giỏ hàng (<span id="cartCount">0</span>)
+                </a>
+            </div>
+
         </div>
-        <div class="cart-list" id="cart-list">
-          <article class="cart-item" data-price="45000">
-            <img class="product-image" src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=240&q=80" alt="Bột mì trong bát và trên mặt bàn" loading="lazy">
-            <div class="product-info">
-              <p class="product-category">NGUYÊN LIỆU LÀM BÁNH</p>
-              <h3>Bột mì đa dụng</h3>
-              <p class="product-variant">Quy cách: 1 kg</p>
-              <button class="remove-link" type="button" data-remove aria-label="Xóa Bột mì đa dụng khỏi giỏ hàng">Xóa sản phẩm</button>
-            </div>
-            <div class="product-price">
-              <strong>45.000 ₫</strong>
-              <span class="unit-price">/ gói</span>
-            </div>
-            <div class="quantity-control" aria-label="Số lượng Bột mì đa dụng">
-              <button type="button" data-step="-1" aria-label="Giảm số lượng Bột mì đa dụng">−</button>
-              <output class="quantity" aria-live="polite">1</output>
-              <button type="button" data-step="1" aria-label="Tăng số lượng Bột mì đa dụng">+</button>
-            </div>
-          </article>
+    </header>
 
-          <article class="cart-item" data-price="60000">
-            <img class="product-image" src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=240&q=80" alt="Socola dùng trong làm bánh" loading="lazy">
-            <div class="product-info">
-              <p class="product-category">NGUYÊN LIỆU LÀM BÁNH</p>
-              <h3>Socola chip</h3>
-              <p class="product-variant">Quy cách: 200 g</p>
-              <button class="remove-link" type="button" data-remove aria-label="Xóa Socola chip khỏi giỏ hàng">Xóa sản phẩm</button>
-            </div>
-            <div class="product-price">
-              <strong>60.000 ₫</strong>
-              <span class="unit-price">/ gói</span>
-            </div>
-            <div class="quantity-control" aria-label="Số lượng Socola chip">
-              <button type="button" data-step="-1" aria-label="Giảm số lượng Socola chip">−</button>
-              <output class="quantity" aria-live="polite">1</output>
-              <button type="button" data-step="1" aria-label="Tăng số lượng Socola chip">+</button>
-            </div>
-          </article>
+    <main id="home">
 
-          <article class="cart-item" data-price="35000">
-            <img class="product-image" src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=240&q=80" alt="Bánh ngọt trang trí" loading="lazy">
-            <div class="product-info">
-              <p class="product-category">DỤNG CỤ LÀM BÁNH</p>
-              <h3>Khuôn bánh mini</h3>
-              <p class="product-variant">Quy cách: 1 chiếc</p>
-              <button class="remove-link" type="button" data-remove aria-label="Xóa Khuôn bánh mini khỏi giỏ hàng">Xóa sản phẩm</button>
-            </div>
-            <div class="product-price">
-              <strong>35.000 ₫</strong>
-              <span class="unit-price">/ chiếc</span>
-            </div>
-            <div class="quantity-control" aria-label="Số lượng Khuôn bánh mini">
-              <button type="button" data-step="-1" aria-label="Giảm số lượng Khuôn bánh mini">−</button>
-              <output class="quantity" aria-live="polite">1</output>
-              <button type="button" data-step="1" aria-label="Tăng số lượng Khuôn bánh mini">+</button>
-            </div>
-          </article>
+        <!-- HERO BANNER -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-panel">
 
-          <article class="cart-item" data-price="52000">
-            <img class="product-image" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=240&q=80" alt="Bánh kem trang trí" loading="lazy">
-            <div class="product-info">
-              <p class="product-category">COMBO DIY</p>
-              <h3>Combo trang trí bánh</h3>
-              <p class="product-variant">Bộ dụng cụ cơ bản</p>
-              <button class="remove-link" type="button" data-remove aria-label="Xóa Combo trang trí bánh khỏi giỏ hàng">Xóa sản phẩm</button>
+                    <div class="hero-copy">
+                        <p class="eyebrow">
+                            BEEBAKE · BAKING MADE SIMPLE
+                        </p>
+
+                        <h1>
+                            Trao gửi yêu thương qua từng chiếc bánh
+                        </h1>
+
+                        <p>
+                            Tìm thấy nguyên liệu và dụng cụ làm bánh chất lượng,
+                            giúp bạn tự tin tạo nên những mẻ bánh thơm ngon ngay tại nhà.
+                        </p>
+
+                        <a href="#products" class="button">
+                            Khám phá sản phẩm →
+                        </a>
+
+                        <div class="trust-row">
+                            <span>✓ Nguyên liệu chọn lọc</span>
+                            <span>✓ Dụng cụ tiện lợi</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-image"></div>
+
+                </div>
             </div>
-            <div class="product-price">
-              <strong>52.000 ₫</strong>
-              <span class="unit-price">/ bộ</span>
-            </div>
-            <div class="quantity-control" aria-label="Số lượng Combo trang trí bánh">
-              <button type="button" data-step="-1" aria-label="Giảm số lượng Combo trang trí bánh">−</button>
-              <output class="quantity" aria-live="polite">1</output>
-              <button type="button" data-step="1" aria-label="Tăng số lượng Combo trang trí bánh">+</button>
-            </div>
-          </article>
-        </div>
-        <div class="cart-footer">
-          <p><span class="secure-dot" aria-hidden="true">✓</span> Bạn có thể kiểm tra lại đơn hàng trước khi đặt mua.</p>
-          <button type="button" class="text-button" id="clear-cart">Xóa toàn bộ giỏ hàng</button>
-        </div>
-        <section class="empty-state" id="empty-state" hidden>
-          <div class="empty-icon" aria-hidden="true">🛒</div>
-          <h2>Giỏ hàng đang trống</h2>
-          <p>Hãy khám phá sản phẩm và chọn món bạn cần nhé.</p>
-          <a class="primary-button inline-button" href="#products">Khám phá sản phẩm</a>
         </section>
-      </div>
 
-      <aside class="order-summary" aria-labelledby="summary-title">
-        <h2 id="summary-title">Tóm tắt đơn hàng</h2>
-        <div class="summary-row">
-          <span>Tạm tính (<span id="summary-count">4</span> sản phẩm)</span>
-          <strong id="subtotal">192.000 ₫</strong>
-        </div>
-        <form class="coupon-form" id="coupon-form">
-          <label for="coupon-code">Mã giảm giá</label>
-          <div class="coupon-input-row">
-            <input id="coupon-code" name="coupon" type="text" placeholder="Nhập mã ưu đãi" autocomplete="off">
-            <button type="submit">Áp dụng</button>
-          </div>
-          <p class="form-message" id="coupon-message" aria-live="polite">Thử mã mẫu <strong>BEE10</strong> để xem trạng thái giao diện.</p>
-        </form>
-        <div class="summary-row shipping-row">
-          <span>Phí vận chuyển</span>
-          <span class="muted">Tính ở bước tiếp theo</span>
-        </div>
-        <div class="summary-total">
-          <span>Tổng tiền hàng</span>
-          <strong id="total">192.000 ₫</strong>
-        </div>
-        <p class="summary-note">Phí giao hàng và ưu đãi vận chuyển (nếu có) sẽ được xác nhận khi bạn cung cấp địa chỉ nhận hàng.</p>
-        <button class="primary-button checkout-button" id="checkout-button" type="button">Tiến hành thanh toán <span aria-hidden="true">→</span></button>
-        <p class="checkout-message" id="checkout-message" aria-live="polite"></p>
-        <div class="payment-note">
-          <span aria-hidden="true">⌑</span>
-          <p>Thông tin đơn hàng được trình bày rõ ràng để bạn kiểm tra trước khi tiếp tục.</p>
-        </div>
-      </aside>
-    </section>
+       <!-- CATEGORY -->
+<section class="section" id="categories"
+         aria-labelledby="categories-title">
+    <div class="container">
 
-    <section class="suggestions" id="products" aria-labelledby="suggestions-title">
-      <div>
-        <p class="eyebrow">THÊM CẢM HỨNG CHO BẠN</p>
-        <h2 id="suggestions-title">Có thể bạn cũng cần</h2>
-      </div>
-      <p class="suggestions-caption">Một vài món đồ nhỏ cho lần làm bánh tiếp theo.</p>
-    </section>
-  </main>
+        <!-- Tiêu đề khu vực danh mục -->
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">KHÁM PHÁ BEEBAKE</p>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 BeeBake · Giao diện minh họa phục vụ học tập</p>
-      <p>HTML5 · CSS3 · JavaScript thuần cho tương tác mẫu</p>
+                <h2 id="categories-title">
+                    Danh mục sản phẩm
+                </h2>
+
+                <p>
+                    Mọi thứ bạn cần cho hành trình làm bánh
+                    đều có thể tìm thấy tại đây.
+                </p>
+            </div>
+
+            <a href="#products" class="text-link">
+                Xem tất cả →
+            </a>
+        </div>
+
+        <!-- Danh sách danh mục sản phẩm -->
+        <div class="category-grid">
+
+            <!-- Danh mục 1 -->
+            <a href="#products" class="category-card">
+                <span class="category-icon">🌾</span>
+
+                <div>
+                    <h3>Nguyên liệu</h3>
+                    <p>Bột, đường, cacao...</p>
+                </div>
+            </a>
+
+            <!-- Danh mục 2 -->
+            <a href="#products" class="category-card">
+                <span class="category-icon">🥣</span>
+
+                <div>
+                    <h3>Dụng cụ làm bánh</h3>
+                    <p>Khuôn, phới, cân...</p>
+                </div>
+            </a>
+
+            <!-- Danh mục 3 -->
+            <a href="#products" class="category-card">
+                <span class="category-icon">🍫</span>
+
+                <div>
+                    <h3>Socola & trang trí</h3>
+                    <p>Topping, kem, socola...</p>
+                </div>
+            </a>
+
+            <!-- Danh mục 4 -->
+            <a href="#products" class="category-card">
+                <span class="category-icon">🎁</span>
+
+                <div>
+                    <h3>Combo làm bánh</h3>
+                    <p>Bộ sản phẩm tiện lợi...</p>
+                </div>
+            </a>
+
+        </div>
     </div>
-  </footer>
-  <script>
-    // Tương tác minh họa phía trình duyệt; không kết nối máy chủ hoặc lưu dữ liệu lâu dài.
-    const cartList = document.querySelector("#cart-list");
-    const itemCount = document.querySelector("#item-count");
-    const cartCount = document.querySelector("#cart-count");
-    const summaryCount = document.querySelector("#summary-count");
-    const subtotal = document.querySelector("#subtotal");
-    const total = document.querySelector("#total");
-    const emptyState = document.querySelector("#empty-state");
-    const couponForm = document.querySelector("#coupon-form");
-    const couponInput = document.querySelector("#coupon-code");
-    const couponMessage = document.querySelector("#coupon-message");
-    const checkoutButton = document.querySelector("#checkout-button");
-    const checkoutMessage = document.querySelector("#checkout-message");
-    let discountRate = 0;
+</section>
+        <!-- FEATURED PRODUCTS -->
+        <section class="section products-section" id="products">
+            <div class="container">
 
-    const formatVND = amount => new Intl.NumberFormat("vi-VN", {
-      style: "currency", currency: "VND", maximumFractionDigits: 0
-    }).format(amount);
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">ĐƯỢC YÊU THÍCH</p>
+                        <h2>Sản phẩm nổi bật</h2>
+                        <p>
+                            Những nguyên liệu và dụng cụ cần thiết
+                            để bắt đầu làm bánh.
+                        </p>
+                    </div>
 
-    function updateCart() {
-      const items = [...cartList.querySelectorAll(".cart-item")];
-      let quantitySum = 0;
-      let amount = 0;
+                    <a href="#categories" class="text-link">
+                        Khám phá danh mục →
+                    </a>
+                </div>
 
-      items.forEach(item => {
-        const quantity = Number(item.querySelector(".quantity").textContent);
-        quantitySum += quantity;
-        amount += Number(item.dataset.price) * quantity;
-      });
+                <div class="product-grid">
 
-      const discount = Math.round(amount * discountRate);
-      const finalAmount = Math.max(0, amount - discount);
+                    <article class="product-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=600&q=85"
+                            alt="Bột mì làm bánh">
 
-      itemCount.textContent = `${quantitySum} sản phẩm`;
-      cartCount.textContent = quantitySum;
-      summaryCount.textContent = quantitySum;
-      subtotal.textContent = formatVND(amount);
-      total.textContent = formatVND(finalAmount);
-      emptyState.hidden = items.length !== 0;
-      cartList.hidden = items.length === 0;
-      document.querySelector(".cart-footer").hidden = items.length === 0;
-      checkoutButton.disabled = items.length === 0;
-      checkoutMessage.textContent = "";
-    }
+                        <div class="product-info">
+                            <p class="product-category">NGUYÊN LIỆU</p>
+                            <h3>Bột mì đa dụng</h3>
+                            <p class="product-meta">Quy cách: 1 kg</p>
 
-    cartList.addEventListener("click", event => {
-      const button = event.target.closest("button");
-      if (!button) return;
-      const item = button.closest(".cart-item");
-      if (button.hasAttribute("data-remove")) {
-        item.remove();
-        updateCart();
-        return;
-      }
-      if (button.hasAttribute("data-step")) {
-        const output = item.querySelector(".quantity");
-        const next = Math.max(1, Number(output.textContent) + Number(button.dataset.step));
-        output.textContent = next;
-        updateCart();
-      }
-    });
+                            <div class="product-bottom">
+                                <span class="price">45.000 ₫</span>
+                                <button class="add-button" data-name="Bột mì đa dụng">
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                    </article>
 
-    document.querySelector("#clear-cart").addEventListener("click", () => {
-      cartList.replaceChildren();
-      discountRate = 0;
-      couponInput.value = "";
-      couponMessage.textContent = "Giỏ hàng đã được xóa.";
-      updateCart();
-    });
+                    <article class="product-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=85"
+                            alt="Socola chip">
 
-    couponForm.addEventListener("submit", event => {
-      event.preventDefault();
-      const code = couponInput.value.trim().toUpperCase();
-      if (code === "BEE10") {
-        discountRate = 0.1;
-        couponMessage.textContent = "Đã áp dụng mã mẫu BEE10: giảm 10% tiền hàng.";
-      } else {
-        discountRate = 0;
-        couponMessage.textContent = code
-          ? "Mã chưa hợp lệ trong bản minh họa. Vui lòng thử BEE10."
-          : "Vui lòng nhập mã giảm giá.";
-      }
-      updateCart();
-    });
+                        <div class="product-info">
+                            <p class="product-category">NGUYÊN LIỆU</p>
+                            <h3>Socola chip</h3>
+                            <p class="product-meta">Quy cách: 200 g</p>
 
-    checkoutButton.addEventListener("click", () => {
-      checkoutMessage.textContent = "Đây là giao diện mẫu; chức năng đặt hàng thật chưa được kết nối.";
-    });
+                            <div class="product-bottom">
+                                <span class="price">60.000 ₫</span>
+                                <button class="add-button" data-name="Socola chip">
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                    </article>
 
-    updateCart();
-  </script>
+                    <article class="product-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=600&q=85"
+                            alt="Khuôn bánh mini">
+
+                        <div class="product-info">
+                            <p class="product-category">DỤNG CỤ</p>
+                            <h3>Khuôn bánh mini</h3>
+                            <p class="product-meta">Quy cách: 1 chiếc</p>
+
+                            <div class="product-bottom">
+                                <span class="price">35.000 ₫</span>
+                                <button class="add-button" data-name="Khuôn bánh mini">
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=85"
+                            alt="Combo trang trí bánh">
+
+                        <div class="product-info">
+                            <p class="product-category">COMBO DIY</p>
+                            <h3>Combo trang trí bánh</h3>
+                            <p class="product-meta">Bộ dụng cụ cơ bản</p>
+
+                            <div class="product-bottom">
+                                <span class="price">52.000 ₫</span>
+                                <button class="add-button" data-name="Combo trang trí bánh">
+                                    Thêm vào giỏ
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- RECIPE BANNER -->
+        <section class="section" id="recipes">
+            <div class="container">
+
+                <div class="recipe-banner">
+
+                    <div>
+                        <p class="eyebrow">BẮT ĐẦU TỪ CÔNG THỨC</p>
+
+                        <h2>
+                            Chiếc bánh đầu tiên của bạn sẽ bắt đầu từ đâu?
+                        </h2>
+
+                        <p>
+                            Khám phá các công thức dễ thực hiện,
+                            tham khảo nguyên liệu cần chuẩn bị và chọn mua
+                            những món đồ phù hợp cho căn bếp của bạn.
+                        </p>
+
+                        <a href="#products" class="button button-secondary">
+                            Tìm nguyên liệu làm bánh →
+                        </a>
+                    </div>
+
+                    <img
+                        class="recipe-image"
+                        src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85"
+                        alt="Bánh kem trang trí">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">VỀ CHÚNG TÔI</p>
+                        <h2>BeeBake đồng hành cùng đam mê làm bánh</h2>
+                        <p>
+                            Chúng tôi mong muốn giúp việc chuẩn bị
+                            nguyên liệu và dụng cụ trở nên đơn giản hơn.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-strip">
+
+                    <div class="about-item">
+                        <strong>Đa dạng lựa chọn</strong>
+                        <p>
+                            Nguyên liệu và dụng cụ cơ bản cho nhiều
+                            loại bánh khác nhau.
+                        </p>
+                    </div>
+
+                    <div class="about-item">
+                        <strong>Dễ dàng tìm kiếm</strong>
+                        <p>
+                            Danh mục rõ ràng giúp bạn nhanh chóng
+                            tìm được sản phẩm cần thiết.
+                        </p>
+                    </div>
+
+                    <div class="about-item">
+                        <strong>Truyền cảm hứng</strong>
+                        <p>
+                            Gợi ý công thức và sản phẩm để bạn tự tin
+                            sáng tạo trong căn bếp.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <div class="footer-brand">BeeBake</div>
+                    <p>
+                        Cùng bạn chuẩn bị những nguyên liệu và dụng cụ
+                        cần thiết để tạo nên những chiếc bánh thơm ngon.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Khám phá</h3>
+                    <div class="footer-links">
+                        <a href="#categories">Danh mục sản phẩm</a>
+                        <a href="#products">Sản phẩm nổi bật</a>
+                        <a href="#recipes">Công thức làm bánh</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Liên hệ</h3>
+                    <div class="footer-links">
+                        <a href="mailto:hello@beebake.example">
+                            Email: hello@beebake.example
+                        </a>
+                        <a href="#about">Thông tin cửa hàng</a>
+                        <a href="#home">Trở về đầu trang ↑</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                © 2026 BeeBake · Giao diện minh họa phục vụ học tập
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        Đã thêm sản phẩm vào giỏ hàng!
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Chuẩn hóa văn bản tiếng Việt Unicode NFC
+        document.querySelectorAll("body *").forEach(element => {
+            element.childNodes.forEach(node => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    node.textContent = node.textContent.normalize("NFC");
+                }
+            });
+        });
+
+        // Thêm sản phẩm vào giỏ hàng minh họa
+        let cartCount = 0;
+
+        const cartNumber = document.getElementById("cartCount");
+        const toast = document.getElementById("toast");
+
+        let toastTimer;
+
+        document.querySelectorAll(".add-button").forEach(button => {
+            button.addEventListener("click", () => {
+                cartCount++;
+
+                cartNumber.textContent = cartCount;
+
+                toast.textContent =
+                    "Đã thêm " + button.dataset.name + " vào giỏ hàng!";
+
+                toast.classList.add("show");
+
+                clearTimeout(toastTimer);
+
+                toastTimer = setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 2000);
+            });
+        });
+    </script>
+
 </body>
 </html>
