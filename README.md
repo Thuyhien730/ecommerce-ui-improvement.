@@ -101,7 +101,3 @@ Bài tập cá nhân Buổi 2 tiếp tục phát triển website thương mại 
 - **Công cụ AI:** ChatGPT.
 - **Mục đích sử dụng:** Hỗ trợ giải thích HTML5/CSS3, đề xuất CSS và hướng dẫn kiểm tra, điều chỉnh giao diện.
 - **Cách kiểm tra:** Em xem xét mã nguồn được đề xuất, áp dụng vào website và kiểm tra kết quả trực tiếp trên trình duyệt bằng Chrome DevTools. Em điều chỉnh lại mã khi phát hiện vấn đề về bố cục ở màn hình nhỏ.
-
-### 7. Repository và website triển khai
-- **Repository:** [Đường dẫn GitHub]
-- **Website:** [Đường dẫn website đã triển khai / Chưa triển khai]
