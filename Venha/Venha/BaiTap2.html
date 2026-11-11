@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2 - CSS cơ bản</title>
+
+    <style>
+        .dai-hoc {
+    color: blue;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 30px;
+}
+.khoa {
+    color: rgba(255, 0, 0, 0.5);
+    text-align: right;
+    font-style: italic;
+    border: 2px dotted yellow;
+    border-radius: 10px;
+    background-color: gray;
+    font-size: 15px;
+}
+.bit-ueh {
+    color: #c4e84a;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 0px #a00000,
+                 5px 5px 8px #568000;
+}
+body {
+    background-image: url("https://ueh.edu.vn/schools/college/images/logo/bit-header-logo.png");
+    background-size: 30px auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+.doan-van {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: white;
+}
+/* i. Ẩn nội dung vượt ra ngoài khung */
+.an-tran {
+    overflow: hidden;
+}
+
+/* ii. Hiện dấu ba chấm khi chữ bị cắt */
+.dau-ba-cham {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* iii. Không cho chữ xuống dòng */
+.khong-xuong-dong {
+    white-space: nowrap;
+}
+    </style>
+</head>
+<body>
+    <!-- Câu a -->
+    <p class="dai-hoc">Đại học UEH</p>
+
+    <!-- Câu b -->
+    <p class="khoa">Khoa CNTTD</p>
+
+    <!-- Câu c -->
+    <p class="bit-ueh">BIT-UEH</p>
+
+    <!-- Câu d: Hình nền được thiết lập trong CSS của thẻ body -->
+
+    <!-- Câu e - ý i: Ẩn nội dung bị tràn -->
+    <p class="doan-van an-tran">
+        Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam
+        hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng
+        đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước.
+        Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều
+    </p>
+
+    <!-- Câu e - ý ii: Cắt nội dung và hiện dấu ba chấm -->
+    <p class="doan-van dau-ba-cham">
+        Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam
+        hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng
+        đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước.
+        Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều
+    </p>
+
+    <!-- Câu e - ý iii: Không xuống dòng -->
+    <p class="doan-van khong-xuong-dong">
+        Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam
+        hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng
+        đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước.
+        Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều
+    </p>
+</body>
+</html>
