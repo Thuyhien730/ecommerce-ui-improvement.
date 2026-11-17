@@ -1,0 +1,95 @@
+
+.movingDiv{
+border: solid 1px black;
+position:relative;
+margin:30px 5px;
+padding:20px 5px;
+width:30%;
+display:inline;
+line-height:60px;
+}
+
+fieldset{
+border: solid 1px #777777;
+}
+
+.required{
+background-color:#EEEE55;
+}
+
+th {
+    width: 6em;
+    height: 3em;
+    text-align: center;
+}
+
+td {
+    width: 6em;
+    height: 2em;
+    text-align: center;
+}
+
+em { color: red; font-style: italic; }
+
+tr.normal {
+    
+    background-color: #E4F8D3;    
+}
+tr.normal td, tr.normal th, tr.total th, tr.total td {
+    text-align: right;    
+    width: 5em;
+    height: 0.75em;
+    padding: 0.5em;
+    color: #5A574E;
+}
+
+tr.total {     
+    background-color: #96DD4F;
+}
+
+tr.total th, tr.total td {
+        font-weight: bold;
+    color: #000000;
+}
+
+.box {
+    width:20em;
+    margin:  20px auto;
+    padding: 0.5em;
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    box-shadow: 0px 0px 5px rgba(0,0,0,.8);
+    background-color:#fff ; 
+    text-align: left;
+}
+
+.boxImg { 
+    float: left; 
+    padding: 5px;    
+}
+
+
+.country {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 265px;
+    min-height: 58px;
+    margin: 14px auto;
+    padding: 8px 12px;
+    border: 1px solid #bbb;
+    box-shadow: 0 1px 4px #ccc;
+    background-color: white;
+}
+
+.country img {
+    width: 50px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.country-info {
+    flex: 1;
+    font-size: 13px;
+    line-height: 1.2;
+}
