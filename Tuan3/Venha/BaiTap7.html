@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 7 - Bố cục trang</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+        }
+
+        /* Chữ wrapper nằm phía trên khung lớn */
+        .ten-wrapper {
+            max-width: 500px;
+            margin: 20px auto 5px;
+        }
+
+        /* Khung chứa toàn bộ bố cục */
+        #wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 3px solid black;
+            box-sizing: border-box;
+        }
+
+        /* Đường viền và khoảng đệm của bốn phần */
+        header,
+        nav,
+        main,
+        footer {
+            border: 3px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Phần đầu trang */
+        header {
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        /* Phần bên trái */
+        nav {
+            float: left;
+            width: 19%;
+            height: 380px;
+            margin-right: 2%;
+            margin-bottom: 10px;
+        }
+
+        /* Phần nội dung bên phải */
+        main {
+            float: left;
+            width: 79%;
+            height: 380px;
+            margin-bottom: 10px;
+        }
+
+        /* Phần cuối trang */
+        footer {
+            clear: both;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="ten-wrapper">wrapper</p>
+
+    <div id="wrapper">
+        <header>header</header>
+
+        <nav>nav</nav>
+
+        <main>main</main>
+
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Học web chuẩn</title>
+
+    <style>
+        /* Định dạng chung */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333333;
+        }
+
+        /* Canh giữa nội dung và tạo nền xám nhạt */
+        .portfolio {
+            max-width: 1120px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        /* Định dạng tiêu đề */
+        .portfolio h2 {
+            padding-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        /* Đường kẻ nhỏ bên dưới tiêu đề */
+        .duong-ke {
+            width: 70px;
+            border: 0;
+            border-top: 2px solid #339999;
+        }
+
+        /* Bỏ dấu chấm của hai danh sách */
+        .list-tab,
+        .galerry {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* Danh sách các danh mục */
+        .list-tab {
+            padding: 20px 0;
+            margin-bottom: 0;
+        }
+
+        .list-tab li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .list-tab a {
+            color: #555555;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Mục All có màu xanh */
+        .list-tab .active {
+            color: #339999;
+        }
+
+        /* Khu vực chứa hình ảnh */
+        .galerry {
+            background-color: white;
+            margin-top: 0;
+        }
+
+        .galerry li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .galerry img {
+            width: 350px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="portfolio">
+        <!-- Tiêu đề -->
+        <h2>MY PORTFOLIO</h2>
+        <hr class="duong-ke">
+
+        <!-- Danh sách danh mục -->
+        <ul class="list-tab">
+            <li><a class="active" href="./">All</a></li>
+            <li><a href="./">Web App</a></li>
+            <li><a href="./">UI/UX</a></li>
+            <li><a href="./">Graphics Design</a></li>
+            <li><a href="./">Mobile App</a></li>
+            <li><a href="./">Branding</a></li>
+            <li><a href="./">Marketing</a></li>
+        </ul>
+
+        <!-- Danh sách 9 hình ảnh -->
+        <ul class="galerry">
+            <li><a href="./"><img src="hinh-portfolio-baitap6.svg" alt="Hình dự án 1"></a></li>
+            <li><a href="./"><img src="hinh-portfolio-baitap6.svg" alt="Hình dự án 2"></a></li>
+            <li><a href="./"><img src="hinh-portfolio-baitap6.svg" alt="Hình dự án 3"></a></li>
+            <li><a href="./"><img src="hinh-portfolio-baitap6.svg" alt="Hình dự án 4"></a></li>
+            <li><a href="./"><img src="hinh-portfolio-baitap6.svg" alt="Hình dự án 5"></a></li>
+            <li><a href="./"><img src="hinh-portfolio-baitap6.svg" alt="Hình dự án 6"></a></li>
+            <li><a href="./"><img src="hinh-portfolio-baitap6.svg" alt="Hình dự án 7"></a></li>
+            <li><a href="./"><img src="hinh-portfolio-baitap6.svg" alt="Hình dự án 8"></a></li>
+            <li><a href="./"><img src="hinh-portfolio-baitap6.svg" alt="Hình dự án 9"></a></li>
+        </ul>
+    </section>
+</body>
+</html>
